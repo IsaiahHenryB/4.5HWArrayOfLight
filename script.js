@@ -9,10 +9,10 @@ const addArray = (array) =>{
     for(let i=0; i<array.length; i++){
         num += array[i]
     }
-    console.log(num)
+    return num
 }
-addArray(numArray1)
-addArray(numArray2)
+console.log(addArray(numArray1))
+console.log(addArray(numArray2))
 
 const averageArray = (array) =>{
     let num = 0
@@ -20,19 +20,17 @@ const averageArray = (array) =>{
         num += array[i]
     }
     let average = num / array.length
-    console.log(average)
+    return average
 }
-averageArray(numArray1)
-averageArray(numArray2)
+console.log(averageArray(numArray1))
+console.log(averageArray(numArray2))
 
-// const averageArray2 = (array) =>{
-//     let num = 0
-//     for(let i=0; i<array.length; i++){
-//         num += array[i]
-//     }
-//     let average = num / array.length
-//     console.log(average)
-// }
+const averageArray2 = (array) =>{
+    let average = addArray(array) / array.length
+    return average
+}
+console.log(averageArray2(numArray1))
+console.log(averageArray2(numArray2))
 
 const findLargest = (array) =>{
     let num = array[0]
@@ -41,9 +39,9 @@ const findLargest = (array) =>{
             num = array[i]
         }
     }
-    console.log(num)
+    return num
 }
-findLargest(numArray3)
+console.log(findLargest(numArray3))
 
 const sumOfLargest = (array,array2) =>{
     let num = array[0]
@@ -58,6 +56,7 @@ const sumOfLargest = (array,array2) =>{
             num2 = array2[i]
         }
     }
-    console.log(num + num2)
+    let sum = num + num2
+    return sum
 }
-sumOfLargest(numArray4,numArray5)
+console.log(sumOfLargest(numArray4,numArray5))
